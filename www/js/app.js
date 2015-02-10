@@ -29,7 +29,8 @@ angular.module('starter', ['ionic','ngCordova'])
 
      $http.post(
     'https://api.mongolab.com/api/1/databases/testmobile/collections/savehere?apiKey=X8645ILWJXiV_Rmu4gZVn1URuu1WF1Ey', 
-    $scope.data = JSON.stringify(imageData.text)
+  
+     $scope.data = JSON.stringify(imageData.text)
   
   )
   .success(function(){
