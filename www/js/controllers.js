@@ -9,8 +9,9 @@ angular.module('starter.controllers', [])
 
   .controller("AccountCtrl", function($scope, $cordovaBarcodeScanner, $http){
 
-  
-
+   $scope.stationchoice = function(){
+    var iputteddata = inputstation.text;
+}
 
   $scope.insertdatako = function(){
 
@@ -23,7 +24,7 @@ var date = new Date;
 // var json = image.concat(date)
 
 var obj = JSON.parse(json);
-obj['Runners'].push({"Date": date, "Station" : 1});
+obj['Runners'].push({"Date": date, "Station" : inputstation.text});
 var json = JSON.stringify(obj);
 
 
