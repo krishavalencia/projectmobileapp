@@ -3,11 +3,32 @@ angular.module('starter.controllers', [])
 
 
 
+ 
+
+// for the scanner --------------------------------------------------------------------------------------------------------------------
+
   .controller("AccountCtrl", function($scope, $cordovaBarcodeScanner, $http){
+
+  
+
+
   $scope.insertdatako = function(){
+
+
+
     $cordovaBarcodeScanner.scan().then(function(imageData){
 
 var json = imageData.text;
+var date = new Date;
+// var json = image.concat(date)
+
+var obj = JSON.parse(json);
+obj['Runners'].push({"Date": date, "Station" : 1});
+var json = JSON.stringify(obj);
+
+
+
+
 
      $http.post(
     'https://api.mongolab.com/api/1/databases/testmobile/collections/savehere?apiKey=X8645ILWJXiV_Rmu4gZVn1URuu1WF1Ey', 
