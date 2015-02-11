@@ -1,1 +1,7 @@
 /* Empty. Add your own CSS if you like */
+#scanbutton{
+	position: absolute;
+	width: 100%;
+	height: 400px;
+	margin-top: 30px;
+}

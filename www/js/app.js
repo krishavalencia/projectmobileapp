@@ -19,8 +19,9 @@ angular.module('starter', ['ionic','ngCordova', 'starter.controllers'])
       StatusBar.styleDefault();
     }
   });
-})
+});
 
+<<<<<<< HEAD
 //   .controller("ourController", function($scope, $cordovaBarcodeScanner, $http){
 //   $scope.scanBarcode = function(){
 //     $cordovaBarcodeScanner.scan().then(function(imageData){
@@ -45,3 +46,5 @@ angular.module('starter', ['ionic','ngCordova', 'starter.controllers'])
 
 // }
 // });
+=======
+>>>>>>> This is the original working version for scanner (with accordance with qr code format)
