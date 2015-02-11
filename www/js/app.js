@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic','ngCordova'])
+angular.module('starter', ['ionic','ngCordova', 'starter.controllers'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -21,28 +21,27 @@ angular.module('starter', ['ionic','ngCordova'])
   });
 })
 
-  .controller("ourController", function($scope, $cordovaBarcodeScanner, $http){
-  $scope.scanBarcode = function(){
-    $cordovaBarcodeScanner.scan().then(function(imageData){
+//   .controller("ourController", function($scope, $cordovaBarcodeScanner, $http){
+//   $scope.scanBarcode = function(){
+//     $cordovaBarcodeScanner.scan().then(function(imageData){
 
 
 
-     $http.post(
-    'https://api.mongolab.com/api/1/databases/testmobile/collections/savehere?apiKey=X8645ILWJXiV_Rmu4gZVn1URuu1WF1Ey', 
+//      $http.post(
+//     'https://api.mongolab.com/api/1/databases/testmobile/collections/savehere?apiKey=X8645ILWJXiV_Rmu4gZVn1URuu1WF1Ey', 
+//     $scope.data = JSON.stringify(imageData.text)
   
-     $scope.data = JSON.stringify(imageData.text)
-  
-  )
-  .success(function(){
-    console.log(arguments);
-    console.log("yes naman!");
-  })
-  .error(function(){
-    console.log(arguments);
-    console.log("awwww");
-  });
+//   )
+//   .success(function(){
+//     console.log(arguments);
+//     console.log("yes naman!");
+//   })
+//   .error(function(){
+//     console.log(arguments);
+//     console.log("awwww");
+//   });
 
-  });
+//   });
 
-}
-});
+// }
+// });
