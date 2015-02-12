@@ -28,7 +28,7 @@ var json = JSON.stringify(obj);
 
 
      $http.post(
-    'https://api.mongolab.com/api/1/databases/testmobile/collections/savehere?apiKey=X8645ILWJXiV_Rmu4gZVn1URuu1WF1Ey', 
+    'https://api.mongolab.com/api/1/databases/trailrush/collections/stats?apiKey=GW6gU4IP3dpT2bjwSyg0UKj8nDzGX0t1', 
     obj = JSON.parse(json)
   
 
